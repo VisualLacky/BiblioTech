@@ -4,11 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class TestController {
+public class RootMenuController {
 
-    @GetMapping("/test")
-    public String test() {
-        return "testController";
+    @GetMapping("/root")
+    public String root() {
+        return "/root/rootMenu";
     }
 
 }
