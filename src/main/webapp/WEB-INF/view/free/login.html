@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Logon</title>
+  <link rel="stylesheet" th:href="@{/static/css/main.css}">
+</head>
+
+<body>
+<div id="fon-image">
+  <div id="display">
+    <div id="content" class="console-text standart-text-size" >
+
+      <div class="separator-40"></div>
+      <span class="big-text-size">/SYSTEM AUTHORIZATION</span>
+      <div class="separator-60"></div>
+
+      <form class="medium-text-size" th:action="@{/root}" th:method="GET">
+        <span>LOGON:</span><br/>
+        <input type="text" class="form_field console-text" maxlength="15" placeholder="_____"/>
+        <br/>
+        <span>PASSWORD:</span><br/>
+        <input type="password" class="form_field console-text" maxlength="15" placeholder="_____"/>
+        <br/><br/>
+        <input type="submit" class="huge-text-size submit-button" value="Enter >>>">
+      </form>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
