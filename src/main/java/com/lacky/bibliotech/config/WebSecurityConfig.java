@@ -17,6 +17,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/about").permitAll()
                 .antMatchers("/errors").permitAll()
                 .antMatchers("/root").permitAll()
+
+                .antMatchers("/books").permitAll()
+                .antMatchers("/books/**").permitAll()
+
+                .antMatchers("/readers").permitAll()
+                .antMatchers("/readers/**").permitAll()
+
+                .antMatchers("/manage").permitAll()
+                .antMatchers("/db-reset-menu").permitAll()
+
                 .antMatchers("/css/**").permitAll()
                 .antMatchers("/resource/**").permitAll()
                 .anyRequest().authenticated()
@@ -33,7 +43,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) {
         web
                 .ignoring()
-                .antMatchers("/resources/**", "/static/**", "/css/**");
+                .antMatchers("/resources/**", "/static/**", "/css/**", "/img/**");
     }
 
 }

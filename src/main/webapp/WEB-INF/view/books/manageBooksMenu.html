@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="templates/common :: meta('Biblio Tech root')"/>
+<head th:replace="templates/common :: meta('Manage books data')"/>
 
 <body>
   <div id="fon-image">
     <div id="display">
+
       <div th:replace="templates/common :: bigheader"/>
 
       <div id="content" class="console-text standart-text-size" >
 
         <div class="separator-40"></div>
-        <span class="big-text-size">/ROOT</span>
+        <span class="big-text-size">/MANAGE BOOKS</span>
         <div class="separator-60"></div>
 
         <div class="left-align standart-left-aligned-padding">
-          <div onclick="location.href='/login'" class="link-div-button-box width-820">
-            > Issue/receive a book
+          <div onclick="location.href='/books/find'" class="link-div-button-box width-820">
+            > Books search
           </div>
           <div class="separator-medium"></div>
-          <div onclick="location.href='/history'" class="link-div-button-box width-820">
-            > History log
+          <div onclick="location.href='/books/new'" class="link-div-button-box width-820">
+            > Add new
           </div>
           <div class="separator-medium"></div>
-          <div onclick="location.href='/manage'" class="link-div-button-box width-820">
-            > Manage Database
+          <div onclick="location.href='/books/index'" class="link-div-button-box width-820">
+            > Show all
           </div>
           <div class="separator-medium"></div>
-          <div onclick="location.href='/about'" class="link-div-button-box width-820">
-            > System info
+          <div onclick="location.href='/books/info'" class="link-div-button-box width-820">
+            > Info
           </div>
+
           <div class="separator-medium"></div>
           <br/><br/><br/>
-          <div onclick="location.href='/confirm-sign-out'" class="link-div-button-box width-820">
-            > End session
+          <div onclick="location.href='/manage'" class="link-div-button-box width-820">
+            > Return
           </div>
         </div>
 

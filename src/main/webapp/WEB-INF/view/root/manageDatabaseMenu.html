@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="templates/common :: meta('Manage database')"/>
+
+<body>
+  <div id="fon-image">
+    <div id="display">
+
+      <div th:replace="templates/common :: bigheader"/>
+
+      <div id="content" class="console-text standart-text-size" >
+
+        <div class="separator-40"></div>
+        <span class="big-text-size">/DATABASE</span>
+        <div class="separator-60"></div>
+
+        <div class="left-align standart-left-aligned-padding">
+          <div onclick="location.href='/books'" class="link-div-button-box width-820">
+            > Manage books
+          </div>
+          <div class="separator-medium"></div>
+          <div onclick="location.href='/readers'" class="link-div-button-box width-820">
+            > Manage readers
+          </div>
+          <div class="separator-medium"></div>
+          <div onclick="location.href='/db-reset-menu'" class="link-div-button-box width-820">
+            > Database factory reset
+          </div>
+
+          <div class="separator-medium"></div>
+          <br/><br/><br/>
+          <div onclick="location.href='/root'" class="link-div-button-box width-820">
+            > Return
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

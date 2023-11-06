@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="templates/common :: meta('Biblio Tech root')"/>
+<head th:replace="templates/common :: meta('Database reset')"/>
 
 <body>
   <div id="fon-image">
     <div id="display">
+
       <div th:replace="templates/common :: bigheader"/>
 
       <div id="content" class="console-text standart-text-size" >
 
         <div class="separator-40"></div>
-        <span class="big-text-size">/ROOT</span>
+        <span class="big-text-size">/DATABASE RESET</span>
         <div class="separator-60"></div>
 
         <div class="left-align standart-left-aligned-padding">
           <div onclick="location.href='/login'" class="link-div-button-box width-820">
-            > Issue/receive a book
+            > Wipe all data
           </div>
+          <div class="separator-medium"></div>
+          <div class="mini-text-size">
+            Delete all data in current database. </br>
+            There will be no available data in DB after this operation.
+          </div>
+          <div class="separator-medium"></div>
           <div class="separator-medium"></div>
           <div onclick="location.href='/history'" class="link-div-button-box width-820">
-            > History log
+            > Wipe and setup demo data
           </div>
           <div class="separator-medium"></div>
-          <div onclick="location.href='/manage'" class="link-div-button-box width-820">
-            > Manage Database
+          <div class="mini-text-size">
+            Delete all data in current database and replace it with DEMO data. </br>
+            There will be example mock data (books/readers/history) in DB after</br>
+            this operation.
           </div>
-          <div class="separator-medium"></div>
-          <div onclick="location.href='/about'" class="link-div-button-box width-820">
-            > System info
-          </div>
+
           <div class="separator-medium"></div>
           <br/><br/><br/>
-          <div onclick="location.href='/confirm-sign-out'" class="link-div-button-box width-820">
-            > End session
+          <div onclick="location.href='/manage'" class="link-div-button-box width-820">
+            > Return
           </div>
         </div>
 

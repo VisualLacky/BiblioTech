@@ -11,4 +11,9 @@ public class RootMenuController {
         return "/root/rootMenu";
     }
 
+    @GetMapping("/manage")
+    public String manage(){
+        return "root/manageDatabaseMenu";
+    }
+
 }
