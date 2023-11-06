@@ -14,9 +14,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/test").permitAll()
                 .antMatchers("/about").permitAll()
-                .antMatchers("/errors").permitAll()
                 .antMatchers("/errors").permitAll()
                 .antMatchers("/root").permitAll()
                 .antMatchers("/css/**").permitAll()
@@ -32,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    public void configure(WebSecurity web) throws Exception {
+    public void configure(WebSecurity web) {
         web
                 .ignoring()
                 .antMatchers("/resources/**", "/static/**", "/css/**");
