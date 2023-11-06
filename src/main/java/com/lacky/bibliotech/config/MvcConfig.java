@@ -5,6 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.config.annotation.*;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
@@ -15,10 +16,12 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 @EnableWebMvc
 public class MvcConfig implements WebMvcConfigurer {
 
+    private final Environment environment;
     private final ApplicationContext applicationContext;
 
     @Autowired
-    public MvcConfig(ApplicationContext applicationContext) {
+    public MvcConfig(Environment environment, ApplicationContext applicationContext) {
+        this.environment = environment;
         this.applicationContext = applicationContext;
     }
 

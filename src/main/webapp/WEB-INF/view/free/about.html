@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <title>About Biblio Tech</title>
-  <link rel="stylesheet" th:href="@{/static/css/main.css}">
-</head>
+<head th:replace="templates/common :: meta('About Biblio Tech')"/>
 
 <body>
-<div id="fon-image">
-  <div id="display">
+  <div id="fon-image">
+    <div id="display">
+      <div th:replace="templates/common :: bigheader"/>
 
-    <div id="content" class="console-text standart-text-size" >
+      <div id="content" class="console-text standart-text-size" >
 
-      <div class="separator-medium"></div>
-      <span class="big-text-size">/ABOUT BIBLIO TECH</span>
-      <div class="separator-medium"></div>
+        <div class="separator-medium"></div>
+        <span class="big-text-size">/ABOUT BIBLIO TECH</span>
+        <div class="separator-medium"></div>
 
-      <div id="about-text">
-        It's a small training project written by Yurii Semyk
+        <div id="about-text">
+          It's a small training project written by Yurii Semyk. <br/>
 
-        For access the terminal use this credentials:<br/>
-        LOGON adm1n<br/>
-        PASSWORD 0x1E0F3<br/><br/>
+          For access the terminal use this credentials:<br/>
+          LOGON adm1n<br/>
+          PASSWORD 0x1E0F3<br/><br/>
 
-        Have fun!
+          Have fun!
+        </div>
+
+        <div>
+          <div class="separator-60"></div>
+          <div onclick="location.href='/login'" class="link-div-button-box">
+            > RUN authentification
+          </div>
+        </div>
+
       </div>
-
-      <div>
-        <div class="separator-60"></div>
-      </div>
-
     </div>
-  </div>
 
-</div>
+  </div>
 </body>
 </html>

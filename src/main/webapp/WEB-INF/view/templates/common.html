@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!-- meta fragment -->
+<head th:fragment="meta(title)">
+    <meta charset="UTF-8">
+    <title th:text="${title}"/>
+    <link rel="stylesheet" th:href="@{/static/css/main.css}">
+</head>
+
+
+<body>
+
+    <!-- Fon fragment -->
+    <div th:fragment="fon(pagename)">
+        <div id="fon-image"></div>
+    </div>
+
+    <!--Header fragment-->
+    <div th:fragment="bigheader" id="header_div">
+        <span class="logo-text">Lacky's Biblio tech™ V1.0</span>
+        <div class="separator-micro"></div>
+        <div class="separator-micro"></div>
+        <span class="mini-text-size console-text">Accounting terminal</span>
+        <div class="separator-micro"></div>
+        <hr class="header_hr"/><hr class="header_hr"/>
+
+    </div>
+
+</body>
+</html>

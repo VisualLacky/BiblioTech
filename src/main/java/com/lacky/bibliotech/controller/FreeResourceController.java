@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class FreeResourcesController {
+public class FreeResourceController {
 
     @GetMapping("/about")
     public String about() {
